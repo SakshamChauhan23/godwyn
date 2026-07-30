@@ -83,3 +83,29 @@ export function IconCheck({ className }: IconProps) {
     </svg>
   );
 }
+
+export function IconClock({ className }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.5 2" />
+    </svg>
+  );
+}
+
+export function IconUser({ className }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <circle cx="12" cy="8" r="3.5" />
+      <path d="M4.5 20c1.2-3.8 4.2-6 7.5-6s6.3 2.2 7.5 6" />
+    </svg>
+  );
+}
+
+export function IconPlay({ className }: IconProps) {
+  return (
+    <svg {...base} className={className} fill="currentColor" stroke="none">
+      <path d="M8 5.5v13l11-6.5-11-6.5Z" />
+    </svg>
+  );
+}

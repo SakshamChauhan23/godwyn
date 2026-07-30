@@ -2,11 +2,12 @@
 
 import { motion } from "motion/react";
 import { IconArrowUpRight } from "@/components/icons";
+import HeroGraphic from "@/components/HeroGraphic";
 
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-background">
-      <div className="mx-auto max-w-7xl px-6 pt-16 pb-20 lg:px-10 lg:pt-24 lg:pb-28">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-6 pt-16 pb-20 lg:grid-cols-[1fr_auto] lg:px-10 lg:pt-24 lg:pb-28">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -48,6 +49,15 @@ export default function Hero() {
             <IconArrowUpRight className="h-4 w-4" />
           </motion.a>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          className="hidden lg:block"
+        >
+          <HeroGraphic />
+        </motion.div>
       </div>
     </section>
   );
