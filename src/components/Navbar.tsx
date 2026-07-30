@@ -1,3 +1,5 @@
+import { IconArrowUpRight } from "@/components/icons";
+
 const links = [
   { href: "#what-we-build", label: "What We Build" },
   { href: "#how-it-works", label: "How It Works" },
@@ -33,14 +35,15 @@ export default function Navbar() {
           className="hidden items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent/90 lg:inline-flex"
         >
           Show Us the Workflow
-          <span aria-hidden>↗</span>
+          <IconArrowUpRight className="h-4 w-4" />
         </a>
 
         <a
           href="#intake"
           className="inline-flex items-center gap-1.5 rounded-full bg-accent px-3.5 py-2 text-xs font-semibold text-white lg:hidden"
         >
-          Get Started ↗
+          Get Started
+          <IconArrowUpRight className="h-3.5 w-3.5" />
         </a>
       </div>
     </header>

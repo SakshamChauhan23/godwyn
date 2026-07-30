@@ -1,3 +1,5 @@
+import { IconArrowUpRight, IconCheck } from "@/components/icons";
+
 const tiers = [
   {
     name: "Blueprint",
@@ -93,7 +95,7 @@ export default function Pricing() {
                       key={f}
                       className="flex items-start gap-2 text-sm text-white/70"
                     >
-                      <span className="mt-0.5 text-accent">✓</span>
+                      <IconCheck className="mt-0.5 h-4 w-4 flex-none text-accent" />
                       {f}
                     </li>
                   ))}
@@ -108,7 +110,7 @@ export default function Pricing() {
                 }`}
               >
                 {tier.cta}
-                <span aria-hidden>↗</span>
+                <IconArrowUpRight className="h-4 w-4" />
               </a>
             </div>
           ))}

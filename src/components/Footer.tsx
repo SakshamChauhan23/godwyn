@@ -1,3 +1,5 @@
+import { IconArrowUpRight } from "@/components/icons";
+
 const columns = [
   { label: "What We Build", href: "#what-we-build" },
   { label: "How It Works", href: "#how-it-works" },
@@ -33,9 +35,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-white/60 transition-colors hover:text-white"
               >
                 {c.label}
-                <span aria-hidden className="text-xs">
-                  ↗
-                </span>
+                <IconArrowUpRight className="h-3.5 w-3.5" />
               </a>
             ))}
           </nav>

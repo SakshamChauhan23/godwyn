@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { IconArrowUpRight } from "@/components/icons";
 
 export default function Hero() {
   return (
@@ -29,9 +30,9 @@ export default function Hero() {
             <motion.span
               animate={{ y: [0, -4, 0] }}
               transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-              className="ml-2 inline-flex h-[0.6em] w-[0.6em] items-center justify-center rounded-md bg-accent align-middle text-[0.4em] text-white"
+              className="ml-2 inline-flex h-[0.6em] w-[0.6em] items-center justify-center rounded-md bg-accent align-middle text-white"
             >
-              ↗
+              <IconArrowUpRight className="h-[0.4em] w-[0.4em]" />
             </motion.span>
           </motion.h1>
           <motion.a
@@ -44,7 +45,7 @@ export default function Hero() {
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
             Work with us
-            <span aria-hidden>↗</span>
+            <IconArrowUpRight className="h-4 w-4" />
           </motion.a>
         </div>
       </div>

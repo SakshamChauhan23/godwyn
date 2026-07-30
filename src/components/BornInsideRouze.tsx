@@ -1,3 +1,5 @@
+import { IconArrowUpRight } from "@/components/icons";
+
 export default function BornInsideRouze() {
   return (
     <section id="born-inside-rouze" className="bg-background py-20 sm:py-28">
@@ -27,7 +29,7 @@ export default function BornInsideRouze() {
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline"
             >
               See Rouze
-              <span aria-hidden>↗</span>
+              <IconArrowUpRight className="h-4 w-4" />
             </a>
           </div>
 

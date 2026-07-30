@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import WorkflowStrip from "@/components/WorkflowStrip";
 import Why from "@/components/Why";
 import ProblemAndDistinction from "@/components/ProblemAndDistinction";
 import WhatWeBuild from "@/components/WhatWeBuild";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <WorkflowStrip />
         <Why />
         <ProblemAndDistinction />
         <WhatWeBuild />

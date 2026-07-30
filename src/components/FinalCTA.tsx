@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { IconArrowUpRight, IconCheck } from "@/components/icons";
 
 export default function FinalCTA() {
   const [submitted, setSubmitted] = useState(false);
@@ -30,7 +31,7 @@ export default function FinalCTA() {
             {submitted ? (
               <div className="flex h-full flex-col items-center justify-center py-16 text-center">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent-light text-accent">
-                  ✓
+                  <IconCheck className="h-6 w-6" />
                 </div>
                 <h3 className="mb-2 text-lg font-extrabold uppercase tracking-wide">
                   Got it
@@ -79,7 +80,7 @@ export default function FinalCTA() {
                   className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
                 >
                   Submit workflow
-                  <span aria-hidden>↗</span>
+                  <IconArrowUpRight className="h-4 w-4" />
                 </button>
               </form>
             )}

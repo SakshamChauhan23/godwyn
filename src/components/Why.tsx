@@ -2,6 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { IconRead, IconDecide, IconLayers } from "@/components/icons";
+
+const artIcons = {
+  signal: IconRead,
+  pipeline: IconDecide,
+  orbit: IconLayers,
+} as const;
 
 const words = ["marketers", "agencies", "founders", "companies"];
 
@@ -103,6 +110,7 @@ function FlipCard({
   body: string;
   detail: string;
 }) {
+  const Icon = artIcons[art];
   return (
     <div className="group h-[340px] [perspective:1400px]">
       <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -120,7 +128,7 @@ function FlipCard({
         {/* Back */}
         <div className="absolute inset-0 flex flex-col justify-between rounded-2xl border border-accent/30 bg-ink p-7 [backface-visibility:hidden] [transform:rotateY(180deg)]">
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/20 text-accent">
-            ✦
+            <Icon className="h-4 w-4" />
           </span>
           <div>
             <h3 className="mb-2 text-lg font-extrabold uppercase tracking-wide text-white">

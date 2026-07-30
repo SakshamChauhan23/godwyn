@@ -1,11 +1,15 @@
+import { IconLayers, IconCpu } from "@/components/icons";
+
 const cards = [
   {
     title: "Automation moves data",
     body: "Traditional automation connects point A to point B. It triggers on an event and passes a payload along. Useful, but it can't read context or make a call.",
+    Icon: IconLayers,
   },
   {
     title: "Godwyn builds judgment",
     body: "Godwyn's systems read the same context a person would, decide what it means, create the output, and act. The full loop, not just the handoff.",
+    Icon: IconCpu,
   },
 ];
 
@@ -34,8 +38,8 @@ export default function ProblemAndDistinction() {
         <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-2 lg:mt-0">
           {cards.map((card) => (
             <div key={card.title} className="bg-ink p-8 sm:p-10">
-              <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-full border border-white/20">
-                <span className="text-accent">◆</span>
+              <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-accent">
+                <card.Icon className="h-5 w-5" />
               </div>
               <h3 className="mb-3 text-sm font-bold uppercase tracking-wide">
                 {card.title}
